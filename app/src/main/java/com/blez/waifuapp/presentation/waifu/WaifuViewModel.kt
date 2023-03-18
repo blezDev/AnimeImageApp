@@ -41,7 +41,7 @@ class WaifuViewModel @Inject constructor(val repo: ImageRepository) : ViewModel(
                 if (!showNSFW.value)
                     repo.getSFWImage(it)
                 else
-                    repo.getNsfwImage(category)
+                    repo.getNsfwImage(it)
             }
             when (result) {
                 is ResultState.Success -> {
